@@ -64,7 +64,7 @@ void ds_burstWrite() {
   delayMicroseconds(4);
   digitalWrite(CE, HIGH);
   delayMicroseconds(1);
-
+ // ovdje se ručno postavljaju minute, sekunde i sati (datum isto), pa se uploada sa zadanim parametrima
   ds_writeByte(0xBE);        //burst wr
   ds_writeByte(dec2bcd(0));   //sekunde
   ds_writeByte(dec2bcd(17));  //minute
